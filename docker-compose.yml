@@ -1,0 +1,16 @@
+services:
+
+  sleek-airflow:
+
+    image: airflow:latest
+
+    volumes:
+
+        - ./airflow:/opt/airflow
+        - ./airflow/data:/opt/airflow/data
+
+    ports:
+
+      - "8082:8080"
+
+    command: airflow standalone
